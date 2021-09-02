@@ -1,5 +1,4 @@
 #!/bin/sh
-
 cat <<-EOF > /root/cloudreve/conf.ini
 [System]
 ; 运行模式
@@ -32,7 +31,7 @@ Password = $DB_Password
 ; 数据库名称
 Name = $DB_Name
 ; 数据表前缀
-TablePrefix = V3
+TablePrefix = cc
 EOF
 
 trackerlist=`wget -qO- https://trackerslist.com/all.txt |awk NF|sed ":a;N;s/\n/,/g;ta"`
